@@ -1,0 +1,94 @@
+.login-page-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.login-container {
+  background-color: #ffffff;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.login-card {
+  background-color: #fefeff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid blue; */
+  width: 456px;
+  height: 523px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 0px 8px 40px 0px #07070714;
+}
+
+.login-img-con {
+  width: 50%;
+  background-image: url('../../publicFolder/Rectangle\ 1456\ \(1\).png');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  margin-bottom: 15px;
+}
+
+.login-heading {
+  color: #0f172a;
+  font-family: DM Sans;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.input-container {
+  width: 360px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.label {
+  color: #475569;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+}
+
+.input-El {
+  background-color: #e2e8f0;
+  outline: none;
+  font-family: 'Roboto';
+  border: none;
+  height: 40px;
+  margin-top: 4px;
+  padding: 7px;
+  font-size: 16px;
+}
+
+.login-btn {
+  width: 360px;
+  height: 40px;
+  background-color: #f7931e;
+  font-family: 'DM Sans';
+  font-size: 14px;
+  border: none;
+  color: #ffffff;
+  margin-top: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
