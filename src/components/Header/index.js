@@ -9,14 +9,27 @@ const Header = () => {
     setHamburger(prevState => !prevState)
   }
 
+  const onClickCloseButton = () => {
+    setHamburger(prevState => !prevState)
+  }
+
   const loadHamburgerItems = () => (
     <div className="mobile-nav-container">
       <ul className="mobile-nav-list">
         <li className="home-mobile-nav-item">Home</li>
         <li className="cart-mobile-nav-item">Cart</li>
-        <button type="button" className="home-mobile-nav-item">Logout</button>
+        <button type="button" className="logout-mobile-btn">
+          Logout
+        </button>
       </ul>
-      <p>button</p>
+      <button
+        className="close-btn"
+        type="button"
+        aria-label="Close navigation"
+        onClick={onClickCloseButton}
+      >
+        <div className="close-icon-con" />
+      </button>
     </div>
   )
   return (

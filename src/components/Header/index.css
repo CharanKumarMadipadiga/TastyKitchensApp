@@ -68,6 +68,10 @@
   .mobile-nav-list {
     display: none;
   }
+
+  .close-icon-con {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -95,14 +99,14 @@
     padding-left: 20px;
     padding-right: 20px;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
   }
 
   .mobile-nav-list {
     display: flex;
     list-style-type: none;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding-left: 0px;
     width: 80%;
   }
@@ -116,6 +120,7 @@
     line-height: 26px;
     letter-spacing: -0.35555556416511536px;
     text-align: left;
+    background-color: transparent;
   }
 
   .cart-mobile-nav-item {
@@ -136,5 +141,16 @@
     border-radius: 8px;
     border: none;
     margin-left: 35px;
+  }
+
+  .close-icon-con {
+    background-image: url('../../publicFolder/closeSymbol.png');
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+  }
+
+  .close-btn {
+    border: none;
   }
 }
