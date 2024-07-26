@@ -1,0 +1,140 @@
+.navbar {
+  height: 96px;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+}
+
+.nav-logo {
+  margin-right: 12px;
+  /* border: 1px solid black; */
+}
+
+.navbar-items-con {
+  height: 32px;
+  width: 1150px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-items {
+  list-style-type: none;
+  display: flex;
+}
+
+.home-link {
+  margin-right: 45px;
+  color: #f7931e;
+  font-family: 'DM Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.35555556416511536px;
+  text-align: left;
+}
+
+.cart-link {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.35555556416511536px;
+  text-align: left;
+  color: #334155;
+}
+
+.logout-btn {
+  background-color: #f7931e;
+  width: 73px;
+  height: 32px;
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  margin-left: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger-con {
+    display: none;
+  }
+
+  .mobile-nav-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-link {
+    display: none;
+  }
+
+  .cart-link {
+    display: none;
+  }
+
+  .logout-btn {
+    display: none;
+  }
+
+  .hamburger-con {
+    height: 24px;
+    width: 24px;
+  }
+
+  .mobile-nav-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    border: 1px solid red;
+    margin: auto;
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    list-style-type: none;
+    border: 1px solid blue;
+    padding-left: 0px;
+    width: 80%;
+  }
+
+  .home-mobile-nav-item {
+    margin-right: 45px;
+    color: #f7931e;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.35555556416511536px;
+    text-align: left;
+  }
+
+  .cart-mobile-nav-item {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.35555556416511536px;
+    text-align: left;
+    color: #334155;
+  }
+
+  .logout-mobile-btn {
+    background-color: #f7931e;
+    width: 73px;
+    height: 32px;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    margin-left: 35px;
+  }
+}

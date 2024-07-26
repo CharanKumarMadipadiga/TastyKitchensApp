@@ -1,5 +1,11 @@
+import Header from '../Header/index'
+
 import './index.css'
 
-const Home = () => <h1>Home</h1>
+const Home = () => (
+  <>
+    <Header />
+  </>
+)
 
 export default Home
