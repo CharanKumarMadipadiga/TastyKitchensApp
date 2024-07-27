@@ -65,7 +65,13 @@ const Carousel = () => {
 
   const loadSpinner = () => (
     <div className="carousels-loader-container">
-      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+      <Loader
+        type="TailSpin"
+        color="#F7931E"
+        height="53.33"
+        width="53.33"
+        ariaLabel="tail-spin-loading"
+      />
     </div>
   )
 

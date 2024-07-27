@@ -1,0 +1,56 @@
+.popular-restaurent-con {
+  position: relative;
+  top: 150px;
+  width: 86%;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.heading-dropdown-con {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.filter-container {
+  display: flex;
+  width: 180px;
+  height: 24px;
+  /* border: 1px solid blue; */
+  justify-content: space-between;
+}
+
+.popular-restuarent-heading {
+  font-family: DM Sans;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: left;
+  color: #183b56;
+}
+
+.restaurent-caption {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #64748b;
+}
+
+.filter-icon {
+  background: #475569;
+}
+
+.dropdown {
+  width: 112px;
+  height: 24px;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #475569;
+  outline: none;
+}
