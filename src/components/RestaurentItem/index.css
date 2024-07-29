@@ -1,0 +1,27 @@
+.restrent-card {
+  width: 340px;
+  border: 1px solid orange;
+  display: flex;
+}
+
+.restaurent-img {
+  width: 160px;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.details-con {
+  width: 174px;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  line-height: 15px;
+}
+
+.ratings-con {
+    display: flex;
+    width: 37px;
+    height: 18px;
+
+}

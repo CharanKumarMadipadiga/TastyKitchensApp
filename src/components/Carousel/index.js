@@ -51,11 +51,13 @@ const Carousel = () => {
         imageUrl: carousel.image_url,
       }))
 
-      console.log(updatedData)
+      //   console.log(updatedData)
 
       setApiStatus(apiConstants.success)
 
       setCarousels(updatedData)
+    } else {
+      console.log('get carousels api error')
     }
   }
 
