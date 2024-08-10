@@ -1,15 +1,17 @@
 .slide-container {
   border: 1px solid black;
   width: 86%;
-  height: 320px;
+  height: 350px;
   margin: auto;
   padding-left: 0px;
   padding-right: 0px;
   background-color: #cb9165;
+  position: relative;
+  top: 20px;
 }
 
 .carousel-img {
-  height: 320px;
+  height: 350px;
   width: 100%;
   margin: auto;
 }
@@ -53,5 +55,9 @@
     height: 188px;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .carousel-img {
+    height: 320px;
+    width: 100%;
   }
 }
