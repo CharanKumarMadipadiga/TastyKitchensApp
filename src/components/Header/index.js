@@ -1,8 +1,10 @@
 import {useState} from 'react'
-
+import Cookies from 'js-cookie'
+import {withRouter, Link} from 'react-router-dom'
 import './index.css'
 
-const Header = () => {
+const Header = props => {
+  //   console.log(props)
   const [hamburger, setHamburger] = useState(false)
 
   const onClickHamburger = () => {
@@ -11,6 +13,12 @@ const Header = () => {
 
   const onClickCloseButton = () => {
     setHamburger(prevState => !prevState)
+  }
+
+  const onClickLogoutButton = () => {
+    const {history} = props
+    Cookies.remove('jwtToken')
+    history.replace('/login')
   }
 
   const loadHamburgerItems = () => (
@@ -89,11 +97,19 @@ const Header = () => {
             />
           </svg>
           <ul className="nav-items">
-            <li className="home-link">Home</li>
-            <li className="cart-link">Cart</li>
+            <Link to="/">
+              <li className="home-link">Home</li>
+            </Link>
+            <Link to="/cart">
+              <li className="cart-link">Cart</li>
+            </Link>
           </ul>
         </div>
-        <button type="button" className="logout-btn">
+        <button
+          type="button"
+          className="logout-btn"
+          onClick={onClickLogoutButton}
+        >
           Logout
         </button>
         <div className="hamburger-con">
@@ -122,4 +138,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default withRouter(Header)

@@ -52,12 +52,12 @@
 @media screen and (max-width: 768px) {
   .slide-container {
     width: 100%;
-    height: 188px;
+    height: 250px;
     padding-left: 0px;
     padding-right: 0px;
   }
   .carousel-img {
-    height: 320px;
+    height: 280px;
     width: 100%;
   }
 }

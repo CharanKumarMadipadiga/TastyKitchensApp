@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header/index'
+import Footer from '../Footer/index'
 import Carousel from '../Carousel/index'
 import RestaurentItem from '../RestaurentItem/index'
 
@@ -60,7 +61,7 @@ const Home = () => {
         userRating: restaurent.user_rating,
       }))
 
-      console.log(updatedList)
+      //   console.log(updatedList)
 
       setApiStatus(apiConstants.success)
 
@@ -184,6 +185,7 @@ const Home = () => {
           </svg>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
