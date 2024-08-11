@@ -39,6 +39,7 @@
   line-height: 26px;
   letter-spacing: -0.35555556416511536px;
   text-align: left;
+  text-decoration: none !important;
 }
 
 .cart-link {
@@ -49,6 +50,7 @@
   letter-spacing: -0.35555556416511536px;
   text-align: left;
   color: #334155;
+  text-decoration: none;
 }
 
 .logout-btn {

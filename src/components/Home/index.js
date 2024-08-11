@@ -8,6 +8,19 @@ import RestaurentItem from '../RestaurentItem/index'
 
 import './index.css'
 
+const sortByOptions = [
+  {
+    id: 1,
+    displayText: 'Highest',
+    value: 'Highest',
+  },
+  {
+    id: 2,
+    displayText: 'Lowest',
+    value: 'Lowest',
+  },
+]
+
 const apiConstants = {
   pending: 'PENDING',
   success: 'SUCCESS',
@@ -19,14 +32,21 @@ const offsetAndLimit = {
 }
 
 const Home = () => {
-  const [apiStatus, setApiStatus] = useState(apiConstants.pending)
+  const [apiStatus, setApiStatus] = useState('')
   const [restaurentsList, setRestaurentsList] = useState([])
   const [offsetAndLimitObj, setOffsetAndLimitObj] = useState(offsetAndLimit)
+  const [activePageValue, setActivePage] = useState(1)
+  const [activeSortByValue, setSortByValue] = useState(sortByOptions[1].value)
 
-  const getRestaurentsList = async () => {
+  const getRestaurentsList = async (
+    updatedOffsetAndLimit = offsetAndLimitObj,
+  ) => {
+    setApiStatus(apiConstants.pending)
+    console.log('function called')
+    console.log(updatedOffsetAndLimit.offset)
     const secretToken = Cookies.get('jwtToken')
 
-    const url = `https://apis.ccbp.in/restaurants-list?offset=${offsetAndLimit.offset}&limit=${offsetAndLimit.limit}`
+    const url = `https://apis.ccbp.in/restaurants-list?offset=${updatedOffsetAndLimit.offset}&limit=${updatedOffsetAndLimit.limit}&sort_by_rating=${activeSortByValue}`
 
     const options = {
       method: 'GET',
@@ -86,6 +106,35 @@ const Home = () => {
     </div>
   )
 
+  const onClickRightBtn = () => {
+    setActivePage(activePageValue + 1)
+  }
+
+  const onClickLeftBtn = () => {
+    setActivePage(activePageValue - 1)
+  }
+
+  const onChangeSortBy = event => {
+    setSortByValue(event.target.value)
+  }
+
+  const getMoreRestaurentsList = () => {
+    const updatedActivePageValue = activePageValue === 0 ? 1 : activePageValue
+    const offsetValue = (updatedActivePageValue - 1) * offsetAndLimit.limit
+    setOffsetAndLimitObj(prevState => {
+      const updatedState = {...prevState, offset: offsetValue}
+      getRestaurentsList(updatedState)
+      return updatedState
+    })
+  }
+
+  useEffect(() => {
+    getMoreRestaurentsList()
+  }, [activePageValue, activeSortByValue])
+
+  //   const offsetValue = (activePageValue - 1) * offsetAndLimit.limit
+  //   console.log(offsetValue)
+
   useEffect(() => {
     getRestaurentsList()
   }, [])
@@ -115,9 +164,18 @@ const Home = () => {
               <rect x="0" y="0" width="24" height="24" fill="#475569" />
             </svg>
 
-            <select className="dropdown">
-              <option className="dropdown-option">Lowest</option>
-              <option className="dropdown-option">Highest</option>
+            <select
+              className="dropdown"
+              value={activeSortByValue}
+              onChange={onChangeSortBy}
+            >
+              {/* <option className="dropdown-option">Lowest</option>
+              <option className="dropdown-option">Highest</option> */}
+              {sortByOptions.map(eachOption => (
+                <option key={eachOption.id} value={eachOption.value}>
+                  {eachOption.displayText}
+                </option>
+              ))}
             </select>
           </div>
         </div>
@@ -141,6 +199,7 @@ const Home = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="left-btn"
+            onClick={onClickLeftBtn}
           >
             <g clipPath="url(#clip0_13799_11207)">
               <path
@@ -158,7 +217,9 @@ const Home = () => {
             </defs>
           </svg>
           <div className="pagination">
-            <p className="pagination-number">1 of 20</p>
+            <p className="pagination-number">
+              {activePageValue === 0 ? 1 : activePageValue} of 20
+            </p>
           </div>
           <svg
             width="32"
@@ -167,6 +228,7 @@ const Home = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="right-btn"
+            onClick={onClickRightBtn}
           >
             <g clipPath="url(#clip0_13799_11208)">
               <path

@@ -1,5 +1,3 @@
-import {Component} from 'react'
-
 import './index.css'
 
 export default function Footer() {

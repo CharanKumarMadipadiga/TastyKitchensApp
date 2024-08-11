@@ -5,19 +5,6 @@ import Home from './components/Home/index'
 import Cart from './components/Cart/index'
 import './App.css'
 
-// const sortByOptions = [
-//   {
-//     id: 0,
-//     displayText: 'Highest',
-//     value: 'Highest',
-//   },
-//   {
-//     id: 2,
-//     displayText: 'Lowest',
-//     value: 'Lowest',
-//   },
-// ]
-
 const App = () => (
   <BrowserRouter>
     <Switch>

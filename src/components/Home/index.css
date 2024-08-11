@@ -149,6 +149,15 @@
 .right-btn {
   cursor: pointer;
 }
+
+.left-btn:hover {
+  stroke: black;
+}
+
+.right-btn:hover {
+  stroke: black;
+}
+
 .pagination-number {
   color: #334155;
   font-family: Bree Serif;
@@ -156,4 +165,8 @@
   font-weight: 400;
   line-height: 27.16px;
   text-align: center;
+}
+
+.logo-feature {
+  cursor: pointer;
 }
