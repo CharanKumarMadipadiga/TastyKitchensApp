@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import './index.css'
 
 const RestaurentItem = props => {
@@ -6,7 +7,7 @@ const RestaurentItem = props => {
   const {id, imageUrl, name, cuisine, userRating} = restaurentDetails
 
   return (
-    <li className="restrent-card" key={id}>
+    <Link to={`/restaurants-list/${id}`} className="restrent-card" key={id}>
       <img src={imageUrl} alt="restaurant" className="restaurent-img" />
       <div className="details-con">
         <p className="card-name">{name}</p>
@@ -29,7 +30,7 @@ const RestaurentItem = props => {
           <p className="card-rating">{userRating.rating}</p>
         </div>
       </div>
-    </li>
+    </Link>
   )
 }
 

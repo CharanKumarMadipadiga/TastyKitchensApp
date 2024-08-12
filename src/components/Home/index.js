@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
+import {Redirect} from 'react-router-dom'
 import Header from '../Header/index'
 import Footer from '../Footer/index'
 import Carousel from '../Carousel/index'
@@ -32,6 +33,7 @@ const offsetAndLimit = {
 }
 
 const Home = () => {
+  const token = Cookies.get('jwtToken')
   const [apiStatus, setApiStatus] = useState('')
   const [restaurentsList, setRestaurentsList] = useState([])
   const [offsetAndLimitObj, setOffsetAndLimitObj] = useState(offsetAndLimit)
@@ -138,6 +140,10 @@ const Home = () => {
   useEffect(() => {
     getRestaurentsList()
   }, [])
+
+  if (token === undefined) {
+    return <Redirect to="/login" />
+  }
 
   return (
     <>
