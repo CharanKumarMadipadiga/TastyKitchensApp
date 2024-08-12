@@ -1,0 +1,90 @@
+.restaurent-details-con {
+  background-color: #333333;
+  width: 100%;
+  height: 390px;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.restaurent-details-card {
+  width: 800px;
+  height: 300px;
+  /* border: 1px solid white; */
+  margin-left: 220px;
+  display: flex;
+}
+
+.restaurent-image {
+  width: 440px;
+  border-radius: 4px;
+}
+
+.restaurent-details-content {
+  margin-left: 28px;
+}
+
+.restaurent-details-name {
+  color: #ffffff;
+  font-size: 36px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.restaurent-details-cuisine {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.restaurent-details-location {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.restaurent-details-rating-amount-con {
+  /* border: 1px solid white; */
+  display: flex;
+  padding-right: 80px;
+  padding-left: 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ratings-review-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid white; */
+}
+
+.ratings-container {
+  display: flex;
+  /* border: 1px solid white; */
+  align-items: center;
+}
+
+.ratings-number {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'DM Sans';
+  margin-left: 5px;
+}
+
+.reviews-count {
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'DM Sans';
+  margin-top: 0px;
+}
+
+.vr-line {
+  border-left: 2px solid #e2e8f0;
+  height: 60px;
+}
