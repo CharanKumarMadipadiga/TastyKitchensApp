@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
-
 import Cookies from 'js-cookie'
+
+import Header from '../Header'
 
 import './index.css'
 
@@ -79,7 +80,11 @@ const RestaurentItemDetails = props => {
     getRestaurentItemDetails()
   }, [])
 
-  return <h1>charan</h1>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default RestaurentItemDetails
