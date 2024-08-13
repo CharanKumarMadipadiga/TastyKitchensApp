@@ -1,0 +1,75 @@
+.food-item-card {
+  width: 430px;
+  height: 180px;
+  display: flex;
+  /* border: 1px solid black; */
+  margin-right: 80px;
+  margin-bottom: 40px;
+}
+
+.food-item-img {
+  width: 255px;
+  height: 180px;
+}
+
+.food-item-content-con {
+  /* border: 1px solid black; */
+  width: 175px;
+  margin-left: 15px;
+  height: 145px;
+  align-self: center;
+}
+
+.food-item-name {
+  color: #334155;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+}
+
+.cost-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 1px solid black; */
+  margin-top: 0px;
+  height: 28px;
+  margin-bottom: 10px;
+}
+
+.food-item-cost {
+  color: #334155;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 3px;
+}
+
+.food-item-rating-con {
+  height: 16px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.food-item-rating {
+  color: #0a1f44;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  margin-left: 7px;
+}
+
+.Add-btn {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Add-btn:hover {
+  font-size: 20px;
+}

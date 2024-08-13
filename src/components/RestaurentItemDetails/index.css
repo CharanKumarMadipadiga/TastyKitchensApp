@@ -5,6 +5,7 @@
   margin-top: 120px;
   display: flex;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .restaurent-details-card {
@@ -13,11 +14,12 @@
   /* border: 1px solid white; */
   margin-left: 220px;
   display: flex;
+  /* border: 7px solid white; */
 }
 
 .restaurent-image {
   width: 440px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .restaurent-details-content {
@@ -45,6 +47,18 @@
   font-family: 'Roboto';
   font-weight: 400;
   line-height: 23px;
+}
+
+.restaurent-loader-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  /* border: 1px solid black; */
+  margin: auto;
 }
 
 .restaurent-details-rating-amount-con {
@@ -87,4 +101,89 @@
 .vr-line {
   border-left: 2px solid #e2e8f0;
   height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .restaurent-loader-container {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* border: 1px solid black; */
+    margin: auto;
+  }
+
+  .restaurent-details-con {
+    margin-top: 0px;
+    width: 100%;
+    height: 330px;
+  }
+
+  .restaurent-details-card {
+    width: 100%;
+    height: 330px;
+    margin-left: 0px;
+    align-items: center;
+    /* border: 7px solid white; */
+    margin-right: 10px;
+  }
+
+  .restaurent-image {
+    width: 200px;
+    height: 200px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 38%;
+    border-top-left-radius: 20%;
+    margin-left: 0px;
+  }
+
+  .restaurent-details-content {
+    /* border: 5px solid white; */
+    margin-top: 80px;
+    margin-left: 15px;
+  }
+
+  .restaurent-details-rating-amount-con {
+    /* border: 5px solid yellow; */
+    padding-right: 40px;
+    justify-content: space-between;
+    padding-right: 0px;
+  }
+
+  .restaurent-details-name {
+    font-size: 16px;
+  }
+
+  .restaurent-details-cuisine {
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+
+  .restaurent-details-location {
+    font-size: 12px;
+    margin-bottom: 0px;
+    line-height: 20px;
+  }
+
+  .ratings-number {
+    font-size: 12px;
+  }
+
+  .reviews-count {
+    font-size: 12px;
+  }
+}
+
+.food-items-list {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  border: 1px solid black;
+  margin: auto;
 }

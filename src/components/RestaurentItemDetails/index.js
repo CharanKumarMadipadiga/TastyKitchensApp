@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
+import FoodItemCart from '../FoodItemCard'
 
 import './index.css'
 
@@ -11,12 +12,14 @@ const apiConstants = {
 }
 
 const RestaurentItemDetails = props => {
-  const [apiStatus, setApiStatus] = useState(apiConstants.pending)
+  const [restaurentApiStatus, setRestaurentApiStatus] = useState(
+    apiConstants.pending,
+  )
   const [restaurentDetails, setRestaurentDetails] = useState({})
   const [foodItemsList, setFoodItemsList] = useState([])
 
-  const loadSpinner = () => (
-    <div className="carousels-loader-container">
+  const renderLoadSpinner = () => (
+    <div className="restaurent-loader-container">
       <Loader
         type="TailSpin"
         color="#F7931E"
@@ -80,7 +83,7 @@ const RestaurentItemDetails = props => {
       console.log(updatedRestaurentDetails)
       console.log(updatedFoodItemsList)
 
-      setApiStatus(apiConstants.success)
+      setRestaurentApiStatus(apiConstants.success)
       setRestaurentDetails(updatedRestaurentDetails)
       setFoodItemsList(updatedFoodItemsList)
     } else {
@@ -159,7 +162,15 @@ const RestaurentItemDetails = props => {
   return (
     <>
       <Header />
-      {renderRestaurentDetailsTopCard()}
+      {restaurentApiStatus === apiConstants.pending
+        ? renderLoadSpinner()
+        : renderRestaurentDetailsTopCard()}
+
+      <ul className="food-items-list">
+        {foodItemsList.map(eachItem => (
+          <FoodItemCart key={eachItem.id} foodCardDetails={eachItem} />
+        ))}
+      </ul>
     </>
   )
 }
