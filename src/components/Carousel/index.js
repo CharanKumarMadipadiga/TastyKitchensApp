@@ -27,7 +27,7 @@ const Carousel = () => {
   const [carouselsArray, setCarousels] = useState([])
 
   const getCarouselOffers = async () => {
-    const secretToken = Cookies.get('jwtToken')
+    const secretToken = Cookies.get('jwt_token')
 
     const url = 'https://apis.ccbp.in/restaurants-list/offers'
 
@@ -73,6 +73,7 @@ const Carousel = () => {
         height="53.33"
         width="53.33"
         ariaLabel="tail-spin-loading"
+        test-id="restaurants-offers-loader"
       />
     </div>
   )
@@ -82,11 +83,7 @@ const Carousel = () => {
       <Slider {...settings}>
         {carouselsArray.map(carousel => (
           <div key={carousel.id}>
-            <img
-              src={carousel.imageUrl}
-              alt="carousel"
-              className="carousel-img"
-            />
+            <img src={carousel.imageUrl} alt="offer" className="carousel-img" />
           </div>
         ))}
       </Slider>

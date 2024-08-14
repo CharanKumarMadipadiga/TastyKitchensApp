@@ -33,7 +33,7 @@ const offsetAndLimit = {
 }
 
 const Home = () => {
-  const token = Cookies.get('jwtToken')
+  const token = Cookies.get('jwt_token')
   const [apiStatus, setApiStatus] = useState('')
   const [restaurentsList, setRestaurentsList] = useState([])
   const [offsetAndLimitObj, setOffsetAndLimitObj] = useState(offsetAndLimit)
@@ -46,14 +46,13 @@ const Home = () => {
     setApiStatus(apiConstants.pending)
     console.log('function called')
     console.log(updatedOffsetAndLimit.offset)
-    const secretToken = Cookies.get('jwtToken')
 
     const url = `https://apis.ccbp.in/restaurants-list?offset=${updatedOffsetAndLimit.offset}&limit=${updatedOffsetAndLimit.limit}&sort_by_rating=${activeSortByValue}`
 
     const options = {
       method: 'GET',
       headers: {
-        Authorization: `Bearer ${secretToken}`,
+        Authorization: `Bearer ${token}`,
       },
     }
 
@@ -104,12 +103,17 @@ const Home = () => {
         height="53.33"
         width="53.33"
         ariaLabel="tail-spin-loading"
+        test-id="restaurants-list-loader"
       />
     </div>
   )
 
   const onClickRightBtn = () => {
-    setActivePage(activePageValue + 1)
+    if (activePageValue >= 4) {
+      alert('Could not find more restaurents')
+    } else {
+      setActivePage(activePageValue + 1)
+    }
   }
 
   const onClickLeftBtn = () => {
@@ -206,6 +210,7 @@ const Home = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="left-btn"
             onClick={onClickLeftBtn}
+            data-testid="pagination-left-button"
           >
             <g clipPath="url(#clip0_13799_11207)">
               <path
@@ -223,8 +228,8 @@ const Home = () => {
             </defs>
           </svg>
           <div className="pagination">
-            <p className="pagination-number">
-              {activePageValue === 0 ? 1 : activePageValue} of 20
+            <p className="pagination-number" data-testid="active-page-number">
+              {activePageValue === 0 ? 1 : activePageValue} of 4
             </p>
           </div>
           <svg
@@ -235,6 +240,7 @@ const Home = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="right-btn"
             onClick={onClickRightBtn}
+            data-testid="pagination-right-button"
           >
             <g clipPath="url(#clip0_13799_11208)">
               <path

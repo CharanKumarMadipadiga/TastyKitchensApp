@@ -1,22 +1,25 @@
 .food-item-card {
-  width: 430px;
-  height: 180px;
+  width: 420px;
+  height: 220px;
   display: flex;
   /* border: 1px solid black; */
   margin-right: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  box-shadow: 0px 1px 2px 0px #bfbfbf;
 }
 
 .food-item-img {
-  width: 255px;
-  height: 180px;
+  width: 60%;
+  height: 220px;
+  /* border: 2px solid black; */
+  border-radius: 7px;
 }
 
 .food-item-content-con {
   /* border: 1px solid black; */
-  width: 175px;
-  margin-left: 15px;
-  height: 145px;
+  width: 40%;
+  margin-left: 20px;
+  height: 155px;
   align-self: center;
 }
 
@@ -72,4 +75,22 @@
 
 .Add-btn:hover {
   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .food-item-card {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 80px;
+    height: 190px;
+  }
+
+  .food-item-img {
+    width: 50%;
+    height: 190px;
+  }
+
+  .food-item-content-con {
+    width: 50%;
+  }
 }

@@ -5,16 +5,16 @@ import './index.css'
 
 const FoodItemCard = props => {
   const {foodCardDetails} = props
-  const {id, cost, foodType, imageUrl, name, rating} = foodCardDetails
+  const {id, cost, imageUrl, name, rating} = foodCardDetails
 
   return (
-    <li className="food-item-card">
+    <li className="food-item-card" key={id} data-testid="foodItem">
       <img src={imageUrl} alt="food item" className="food-item-img" />
       <div className="food-item-content-con">
         <h1 className="food-item-name">{name}</h1>
         <div className="cost-con">
           <FontAwesomeIcon icon={faIndianRupeeSign} />
-          <p className="food-item-cost">{cost}</p>
+          <p className="food-item-cost">{cost}.00</p>
         </div>
         <div className="food-item-rating-con">
           <svg

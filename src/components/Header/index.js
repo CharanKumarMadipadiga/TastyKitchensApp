@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import {withRouter, Link} from 'react-router-dom'
 import './index.css'
@@ -6,6 +6,22 @@ import './index.css'
 const Header = props => {
   //   console.log(props)
   const [hamburger, setHamburger] = useState(false)
+  const [sticky, setSticky] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true)
+      } else {
+        setSticky(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const onClickHamburger = () => {
     setHamburger(prevState => !prevState)
@@ -17,7 +33,7 @@ const Header = props => {
 
   const onClickLogoutButton = () => {
     const {history} = props
-    Cookies.remove('jwtToken')
+    Cookies.remove('jwt_token')
     history.replace('/login')
   }
 
@@ -47,7 +63,7 @@ const Header = props => {
   )
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${sticky ? 'scroll-style' : 'scroll-no-style'}`}>
         <div className="nav-logo-container">
           <Link to="/">
             <svg

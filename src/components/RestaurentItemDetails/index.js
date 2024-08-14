@@ -33,7 +33,7 @@ const RestaurentItemDetails = props => {
   //   console.log('restaurentDetails', props)
 
   const getRestaurentItemDetails = async () => {
-    const secretToken = Cookies.get('jwtToken')
+    const secretToken = Cookies.get('jwt_token')
 
     const {match} = props
     const {params} = match
@@ -155,6 +155,11 @@ const RestaurentItemDetails = props => {
     </div>
   )
 
+  const renderFoodItemsList = () =>
+    foodItemsList.map(eachItem => (
+      <FoodItemCart key={eachItem.id} foodCardDetails={eachItem} />
+    ))
+
   useEffect(() => {
     getRestaurentItemDetails()
   }, [])
@@ -167,9 +172,9 @@ const RestaurentItemDetails = props => {
         : renderRestaurentDetailsTopCard()}
 
       <ul className="food-items-list">
-        {foodItemsList.map(eachItem => (
-          <FoodItemCart key={eachItem.id} foodCardDetails={eachItem} />
-        ))}
+        {restaurentApiStatus === apiConstants.pending
+          ? renderLoadSpinner()
+          : renderFoodItemsList()}
       </ul>
     </>
   )

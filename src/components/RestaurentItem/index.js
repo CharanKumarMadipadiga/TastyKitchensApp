@@ -7,7 +7,12 @@ const RestaurentItem = props => {
   const {id, imageUrl, name, cuisine, userRating} = restaurentDetails
 
   return (
-    <Link to={`/restaurants-list/${id}`} className="restrent-card" key={id}>
+    <Link
+      to={`/restaurants-list/${id}`}
+      className="restrent-card"
+      key={id}
+      test-id="restaurant-item"
+    >
       <img src={imageUrl} alt="restaurant" className="restaurent-img" />
       <div className="details-con">
         <p className="card-name">{name}</p>
