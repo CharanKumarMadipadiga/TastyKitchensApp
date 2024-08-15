@@ -8,20 +8,20 @@ const Header = props => {
   const [hamburger, setHamburger] = useState(false)
   const [sticky, setSticky] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setSticky(true)
-      } else {
-        setSticky(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
+  //   useEffect(() => {
+  //     const handleScroll = () => {
+  //       if (window.scrollY > 0) {
+  //         setSticky(true)
+  //       } else {
+  //         setSticky(false)
+  //       }
+  //     }
+  //     window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  //     return () => {
+  //       window.removeEventListener('scroll', handleScroll)
+  //     }
+  //   }, [])
 
   const onClickHamburger = () => {
     setHamburger(prevState => !prevState)
@@ -71,7 +71,7 @@ const Header = props => {
   )
   return (
     <>
-      <nav className={`navbar ${sticky ? 'scroll-style' : 'scroll-no-style'}`}>
+      <nav className="navbar">
         <div className="nav-logo-container">
           <Link to="/">
             <svg
