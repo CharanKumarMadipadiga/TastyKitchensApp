@@ -45,9 +45,17 @@ const Header = props => {
   const loadHamburgerItems = () => (
     <div className="mobile-nav-container">
       <ul className="mobile-nav-list">
-        <li className="home-mobile-nav-item">Home</li>
-        <li className="cart-mobile-nav-item">Cart</li>
-        <button type="button" className="logout-mobile-btn">
+        <Link to="/" className="home-mobile-nav-item">
+          <li>Home</li>
+        </Link>
+        <Link to="/cart" className="cart-mobile-nav-item">
+          <li>Cart</li>
+        </Link>
+        <button
+          type="button"
+          className="logout-mobile-btn"
+          onClick={onClickLogoutButton}
+        >
           Logout
         </button>
       </ul>
