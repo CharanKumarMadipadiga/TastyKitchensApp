@@ -1,0 +1,12 @@
+.cart-item-con {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+  width: 91%;
+}
+
+.cart-img {
+  height: 80px;
+  width: 130px;
+}

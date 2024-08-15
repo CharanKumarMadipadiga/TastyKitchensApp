@@ -1,4 +1,5 @@
 import Header from '../Header'
+import CartListView from '../CartListView'
 import './index.css'
 
 const Cart = () => (
@@ -10,7 +11,7 @@ const Cart = () => (
         <span className="cart-headers">Quantity</span>
         <span className="cart-headers">Price</span>
       </div>
-      <h1>charan</h1>
+      <CartListView />
     </div>
   </>
 )
