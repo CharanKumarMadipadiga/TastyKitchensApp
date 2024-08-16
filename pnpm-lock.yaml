@@ -23,8 +23,8 @@ specifiers:
   msw: 0.34.0
   npm-run-all: 4.1.5
   prettier: 2.2.1
-  react: 18.3.1
-  react-dom: 18.3.1
+  react: 17.0.2
+  react-dom: 17.0.2
   react-hot-toast: 2.4.1
   react-icons: 4.3.1
   react-loader-spinner: 4.0.0
@@ -41,9 +41,9 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.6.0
   '@fortawesome/free-regular-svg-icons': 6.6.0
   '@fortawesome/free-solid-svg-icons': 6.6.0
-  '@fortawesome/react-fontawesome': 0.2.2_217a750503cd25b7b479da2e64fc86a9
+  '@fortawesome/react-fontawesome': 0.2.2_9690152d958a4d72d118fd848bfc6348
   '@testing-library/jest-dom': 5.11.9
-  '@testing-library/react': 11.2.5_react-dom@18.3.1+react@18.3.1
+  '@testing-library/react': 11.2.5_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 12.6.2
   bootstrap: 5.3.3
   chalk: 4.1.0
@@ -52,15 +52,15 @@ dependencies:
   js-cookie: 2.2.1
   mock-local-storage: 1.1.17
   msw: 0.34.0
-  react: 18.3.1
-  react-dom: 18.3.1_react@18.3.1
-  react-hot-toast: 2.4.1_react-dom@18.3.1+react@18.3.1
-  react-icons: 4.3.1_react@18.3.1
-  react-loader-spinner: 4.0.0_react-dom@18.3.1+react@18.3.1
-  react-router-dom: 5.2.0_react@18.3.1
-  react-slick: 0.28.1_react-dom@18.3.1+react@18.3.1
-  react-toastify: 9.1.3_react-dom@18.3.1+react@18.3.1
-  reactjs-popup: 2.0.5_react-dom@18.3.1+react@18.3.1
+  react: 17.0.2
+  react-dom: 17.0.2_react@17.0.2
+  react-hot-toast: 2.4.1_react-dom@17.0.2+react@17.0.2
+  react-icons: 4.3.1_react@17.0.2
+  react-loader-spinner: 4.0.0_react-dom@17.0.2+react@17.0.2
+  react-router-dom: 5.2.0_react@17.0.2
+  react-slick: 0.28.1_react-dom@17.0.2+react@17.0.2
+  react-toastify: 9.1.3_react-dom@17.0.2+react@17.0.2
+  reactjs-popup: 2.0.5_react-dom@17.0.2+react@17.0.2
   slick-carousel: 1.8.1
   uuid: 10.0.0
 
@@ -72,7 +72,7 @@ devDependencies:
   lint-staged: 10.5.4
   npm-run-all: 4.1.5
   prettier: 2.2.1
-  react-scripts: 4.0.3_react@18.3.1
+  react-scripts: 4.0.3_react@17.0.2
 
 packages:
 
@@ -2761,7 +2761,7 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.6.0
     dev: false
 
-  /@fortawesome/react-fontawesome/0.2.2_217a750503cd25b7b479da2e64fc86a9:
+  /@fortawesome/react-fontawesome/0.2.2_9690152d958a4d72d118fd848bfc6348:
     resolution: {integrity: sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
@@ -2769,7 +2769,7 @@ packages:
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.6.0
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 17.0.2
     dev: false
 
   /@gar/promisify/1.1.3:
@@ -3384,7 +3384,7 @@ packages:
       redent: 3.0.0
     dev: false
 
-  /@testing-library/react/11.2.5_react-dom@18.3.1+react@18.3.1:
+  /@testing-library/react/11.2.5_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-yEx7oIa/UWLe2F2dqK0FtMF9sJWNXD+2PPtp39BvE0Kh9MJ9Kl0HrZAgEuhUJR+Lx8Di6Xz+rKwSdEPY2UV8ZQ==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -3393,8 +3393,8 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.8
       '@testing-library/dom': 7.31.2
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /@testing-library/user-event/12.6.2:
@@ -9944,7 +9944,7 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /mini-create-react-context/0.4.1_prop-types@15.8.1+react@18.3.1:
+  /mini-create-react-context/0.4.1_prop-types@15.8.1+react@17.0.2:
     resolution: {integrity: sha512-YWCYEmd5CQeHGSAKrYvXgmzzkrvssZcuuQDDeqkT+PziKGMgE+0MCCtcKbROzocGBG1meBLl2FotlRwf4gAzbQ==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
@@ -9953,7 +9953,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.8
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 17.0.2
       tiny-warning: 1.0.3
     dev: false
 
@@ -11862,21 +11862,22 @@ packages:
       text-table: 0.2.0
     dev: true
 
-  /react-dom/18.3.1_react@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
+  /react-dom/17.0.2_react@17.0.2:
+    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
-      react: ^18.3.1
+      react: 17.0.2
     dependencies:
       loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
+      object-assign: 4.1.1
+      react: 17.0.2
+      scheduler: 0.20.2
     dev: false
 
   /react-error-overlay/6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
     dev: true
 
-  /react-hot-toast/2.4.1_react-dom@18.3.1+react@18.3.1:
+  /react-hot-toast/2.4.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -11884,18 +11885,18 @@ packages:
       react-dom: '>=16'
     dependencies:
       goober: 2.1.14
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     transitivePeerDependencies:
       - csstype
     dev: false
 
-  /react-icons/4.3.1_react@18.3.1:
+  /react-icons/4.3.1_react@17.0.2:
     resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
     peerDependencies:
       react: '*'
     dependencies:
-      react: 18.3.1
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:
@@ -11908,15 +11909,15 @@ packages:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
     dev: false
 
-  /react-loader-spinner/4.0.0_react-dom@18.3.1+react@18.3.1:
+  /react-loader-spinner/4.0.0_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-RU2vpEej6G4ECei0h3q6bgLU10of9Lw5O+4AwF/mtkrX5oY20Sh/AxoPJ7etbrs/7Q3u4jN5qwCwGLRKCHpk6g==}
     peerDependencies:
       react: '*'
       react-dom: '*'
     dependencies:
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react-refresh/0.8.3:
@@ -11924,7 +11925,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-router-dom/5.2.0_react@18.3.1:
+  /react-router-dom/5.2.0_react@17.0.2:
     resolution: {integrity: sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==}
     peerDependencies:
       react: '>=15'
@@ -11933,13 +11934,13 @@ packages:
       history: 4.10.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
-      react: 18.3.1
-      react-router: 5.2.0_react@18.3.1
+      react: 17.0.2
+      react-router: 5.2.0_react@17.0.2
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
     dev: false
 
-  /react-router/5.2.0_react@18.3.1:
+  /react-router/5.2.0_react@17.0.2:
     resolution: {integrity: sha512-smz1DUuFHRKdcJC0jobGo8cVbhO3x50tCL4icacOlcwDOEQPq4TMqwx3sY1TP+DvtTgz4nm3thuo7A+BK2U0Dw==}
     peerDependencies:
       react: '>=15'
@@ -11948,16 +11949,16 @@ packages:
       history: 4.10.1
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0
-      mini-create-react-context: 0.4.1_prop-types@15.8.1+react@18.3.1
+      mini-create-react-context: 0.4.1_prop-types@15.8.1+react@17.0.2
       path-to-regexp: 1.8.0
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 17.0.2
       react-is: 16.13.1
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
     dev: false
 
-  /react-scripts/4.0.3_react@18.3.1:
+  /react-scripts/4.0.3_react@17.0.2:
     resolution: {integrity: sha512-S5eO4vjUzUisvkIPB7jVsKtuH2HhWcASREYWHAQ1FP5HyCv3xgn+wpILAEWkmy+A+tTNbSZClhxjT3qz6g4L1A==}
     engines: {node: ^10.12.0 || >=12.0.0}
     hasBin: true
@@ -12011,7 +12012,7 @@ packages:
       postcss-preset-env: 6.7.0
       postcss-safe-parser: 5.0.2
       prompts: 2.4.0
-      react: 18.3.1
+      react: 17.0.2
       react-app-polyfill: 2.0.0
       react-dev-utils: 11.0.4
       react-refresh: 0.8.3
@@ -12047,7 +12048,7 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /react-slick/0.28.1_react-dom@18.3.1+react@18.3.1:
+  /react-slick/0.28.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-JwRQXoWGJRbUTE7eZI1rGIHaXX/4YuwX6gn7ulfvUZ4vFDVQAA25HcsHSYaUiRCduTr6rskyIuyPMpuG6bbluw==}
     peerDependencies:
       react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
@@ -12057,38 +12058,39 @@ packages:
       enquire.js: 2.1.6
       json2mq: 0.2.0
       lodash.debounce: 4.0.8
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
       resize-observer-polyfill: 1.5.1
     dev: false
 
-  /react-toastify/9.1.3_react-dom@18.3.1+react@18.3.1:
+  /react-toastify/9.1.3_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-fPfb8ghtn/XMxw3LkxQBk3IyagNpF/LIKjOBflbexr2AWxAH1MJgvnESwEwBn9liLFXgTKWgBSdZpw9m4OTHTg==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
       clsx: 1.2.1
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /react/18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
+  /react/17.0.2:
+    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+      object-assign: 4.1.1
     dev: false
 
-  /reactjs-popup/2.0.5_react-dom@18.3.1+react@18.3.1:
+  /reactjs-popup/2.0.5_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-b5hv9a6aGsHEHXFAgPO5s1Jw1eSkopueyUVxQewGdLgqk2eW0IVXZrPRpHR629YcgIpC2oxtX8OOZ8a7bQJbxA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /read-pkg-up/7.0.1:
@@ -12622,10 +12624,11 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler/0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+  /scheduler/0.20.2:
+    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
     dependencies:
       loose-envify: 1.4.0
+      object-assign: 4.1.1
     dev: false
 
   /schema-utils/1.0.0:
