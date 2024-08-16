@@ -39,7 +39,7 @@ const RestaurentItemDetails = props => {
     const {params} = match
     const {id} = params
 
-    console.log(id)
+    // console.log(id)
 
     const url = `https://apis.ccbp.in/restaurants-list/${id}`
 
@@ -80,8 +80,8 @@ const RestaurentItemDetails = props => {
         rating: eachItem.rating,
       }))
 
-      console.log(updatedRestaurentDetails)
-      console.log(updatedFoodItemsList)
+      //   console.log(updatedRestaurentDetails)
+      //   console.log(updatedFoodItemsList)
 
       setRestaurentApiStatus(apiConstants.success)
       setRestaurentDetails(updatedRestaurentDetails)

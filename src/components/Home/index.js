@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import {Toaster, toast} from 'react-hot-toast'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import {Redirect} from 'react-router-dom'
@@ -110,7 +111,7 @@ const Home = () => {
 
   const onClickRightBtn = () => {
     if (activePageValue >= 4) {
-      alert('Could not find more restaurents')
+      toast.error('Could not find more restaurants')
     } else {
       setActivePage(activePageValue + 1)
     }

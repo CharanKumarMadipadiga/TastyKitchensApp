@@ -15,7 +15,22 @@ const App = () => {
 
   const addCartItem = product => {
     console.log('callback list called')
-    setCartList(prevState => [...prevState, product])
+    console.log('cartList', cartList)
+    const addingItemId = product.id
+    const cartItem = cartList.find(eachItem => eachItem.id === addingItemId)
+    // console.log(addingItemId)
+    // console.log('cartIdsist', cartIdsList)
+    if (cartItem) {
+      setCartList(prevState =>
+        prevState.map(eachItem =>
+          eachItem.id === addingItemId
+            ? {...eachItem, quantity: eachItem.quantity + 1}
+            : eachItem,
+        ),
+      )
+    } else {
+      setCartList(prevState => [...prevState, product])
+    }
   }
 
   const deleteCartItem = () => {}

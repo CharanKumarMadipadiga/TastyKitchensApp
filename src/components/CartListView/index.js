@@ -1,3 +1,6 @@
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faIndianRupeeSign} from '@fortawesome/free-solid-svg-icons'
+
 import CartContext from '../../context/CartContext'
 
 import CartItem from '../CartItem'
@@ -32,12 +35,33 @@ const CartListView = () => (
   <CartContext.Consumer>
     {value => {
       const {cartList} = value
+      const priceList = cartList.map(eachItem => eachItem.cost)
+      const price = priceList.reduce(
+        (acc, currentValue) => acc + currentValue,
+        0,
+      )
       return (
-        <ul className="cart-list">
-          {cartList.map(cartItem => (
-            <CartItem key={cartItem.id} cartDetails={cartItem} />
-          ))}
-        </ul>
+        <>
+          <ul className="cart-list">
+            {cartList.map(cartItem => (
+              <CartItem key={cartItem.id} cartDetails={cartItem} />
+            ))}
+          </ul>
+          <hr className="cart-hr-line" />
+          <div className="order-total-place-con">
+            <h1 className="order-total-heading">Order Total :</h1>
+            <div className="total-price-con">
+              <FontAwesomeIcon
+                icon={faIndianRupeeSign}
+                style={{color: '#3E4C59', fontSize: '24px'}}
+              />
+              <p className="total-price">{price}</p>
+            </div>
+          </div>
+          <button className="place-order-btn" type="button">
+            Place Order
+          </button>
+        </>
       )
     }}
   </CartContext.Consumer>

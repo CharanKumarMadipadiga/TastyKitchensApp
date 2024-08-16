@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import Cookies from 'js-cookie'
 import {withRouter, Link} from 'react-router-dom'
 import './index.css'
@@ -6,7 +6,6 @@ import './index.css'
 const Header = props => {
   //   console.log(props)
   const [hamburger, setHamburger] = useState(false)
-  const [sticky, setSticky] = useState(false)
 
   //   useEffect(() => {
   //     const handleScroll = () => {
