@@ -137,6 +137,7 @@
   .mobile-nav-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
     /* border: 1px solid blue; */
     padding-left: 15px;

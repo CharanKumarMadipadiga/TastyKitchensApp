@@ -9,7 +9,7 @@ const CartItem = props => {
   const {id, name, imageUrl, cost, quantity} = cartDetails
 
   const renderAddQuantityButtonsMobile = () => (
-    <div className="cart-quantity-con">
+    <div className="cart-quantity-con-mobile">
       <svg
         width="18"
         height="18"
@@ -38,7 +38,7 @@ const CartItem = props => {
         />
       </svg>
 
-      <p className="active-count">{quantity}</p>
+      <p className="active-count-mobile">{quantity}</p>
       <svg
         width="18"
         height="18"
@@ -96,7 +96,7 @@ const CartItem = props => {
           />
         </svg>
 
-        <p className="active-count">{quantity}</p>
+        <p className="active-count-desktop">{quantity}</p>
         <svg
           width="18"
           height="18"
@@ -137,7 +137,7 @@ const CartItem = props => {
             icon={faIndianRupeeSign}
             style={{color: '#FFA412', fontSize: '16px'}}
           />
-          <p className="cart-cost">{cost * quantity}.00</p>
+          <p className="cart-cost-desktop">{cost * quantity}.00</p>
         </div>
       </li>
       <li className="cart-item-mobile-con">
@@ -150,7 +150,7 @@ const CartItem = props => {
               icon={faIndianRupeeSign}
               style={{color: '#FFA412', fontSize: '16px'}}
             />
-            <p>{cost * quantity}.00</p>
+            <p className="cart-cost-mobile">{cost * quantity}.00</p>
           </div>
         </div>
       </li>

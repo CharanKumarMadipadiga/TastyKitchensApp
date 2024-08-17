@@ -36,9 +36,8 @@ const CartListView = () => (
   <CartContext.Consumer>
     {value => {
       const {cartList} = value
-      const priceList = cartList.map(eachItem => eachItem.cost)
-      const price = priceList.reduce(
-        (acc, currentValue) => acc + currentValue,
+      const totalPrice = cartList.reduce(
+        (total, item) => total + item.cost * item.quantity,
         0,
       )
       return (
@@ -59,12 +58,12 @@ const CartListView = () => (
             <div className="total-price-con">
               <FontAwesomeIcon
                 icon={faIndianRupeeSign}
-                style={{color: '#3E4C59', fontSize: '24px'}}
+                className="rupee-symbol"
               />
-              <p className="total-price">{price}.00</p>
+              <p className="total-price">{totalPrice}.00</p>
             </div>
           </div>
-          <Link to="/payment-successful" className="place-order-now-btn">
+          <Link to="/payment-successful" className="place-btn">
             <button type="button" className="place-order-now-btn">
               Place Order
             </button>
