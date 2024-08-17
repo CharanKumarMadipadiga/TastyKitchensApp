@@ -101,20 +101,24 @@
     width: 90%;
     align-self: center;
     margin-bottom: 80px;
-    height: 165px;
+    height: 175px;
   }
 
   .food-item-img {
     width: 50%;
-    height: 165px;
+    height: 175px;
   }
 
   .food-item-content-con {
     width: 50%;
-    height: 165px;
+    height: 175px;
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .food-item-name {
+    font-size: 16px;
   }
 }

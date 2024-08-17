@@ -51,3 +51,19 @@
   background-color: aqua;
   color: black;
 }
+
+@media screen and (max-width: 768px) {
+  .empty-cart-img {
+    width: 203px;
+    height: 175px;
+    background-size: cover;
+  }
+
+  .empty-cart-text {
+    font-size: 20px;
+  }
+
+  .empty-cart-description {
+    font-size: 14px;
+  }
+}

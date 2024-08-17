@@ -59,3 +59,30 @@
   background-color: aqua;
   color: black;
 }
+
+@media screen and (max-width: 768px) {
+  .notfound-img-con {
+    width: 140px;
+    height: 155px;
+    background-size: cover;
+  }
+
+  .page-not-found-text {
+    font-size: 20px;
+  }
+
+  .description-con {
+    width: 312px;
+    height: 72px;
+  }
+
+  .not-found-description {
+    font-size: 16px;
+  }
+
+  .home-page-btn {
+    width: 98px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
