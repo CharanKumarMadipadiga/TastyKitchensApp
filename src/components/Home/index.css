@@ -93,6 +93,14 @@
   .hr-line {
     display: none;
   }
+
+  .dropdown {
+    font-size: 16px;
+  }
+
+  .dropdown-option {
+    font-size: 16px;
+  }
 }
 
 .restrents-list {

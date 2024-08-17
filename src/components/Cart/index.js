@@ -24,14 +24,18 @@ const Cart = () => (
               Remove All
             </button>
           </div>
-          <div className="cart-con">
-            <div className="cart-header">
-              <span className="cart-item-header">Item</span>
-              <span className="cart-quantity-header">Quantity</span>
-              <span className="cart-price-header">Price</span>
+          <div className="cart-desktop-con">
+            <div className="cart-desktop-header">
+              <span className="cart-item-desktop-header">Item</span>
+              <span className="cart-quantity-desktop-header">Quantity</span>
+              <span className="cart-price-desktop-header">Price</span>
             </div>
             <CartListView />
           </div>
+          <div className="cart-mobile-con">
+            <CartListView />
+          </div>
+
           <Footer />
         </>
       ) : (

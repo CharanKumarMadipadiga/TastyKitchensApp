@@ -43,7 +43,12 @@ const CartListView = () => (
       )
       return (
         <>
-          <ul className="cart-list">
+          <ul className="cart-desktop-list">
+            {cartList.map(cartItem => (
+              <CartItem key={cartItem.id} cartDetails={cartItem} />
+            ))}
+          </ul>
+          <ul className="cart-mobile-list">
             {cartList.map(cartItem => (
               <CartItem key={cartItem.id} cartDetails={cartItem} />
             ))}
@@ -56,7 +61,7 @@ const CartListView = () => (
                 icon={faIndianRupeeSign}
                 style={{color: '#3E4C59', fontSize: '24px'}}
               />
-              <p className="total-price">{price}</p>
+              <p className="total-price">{price}.00</p>
             </div>
           </div>
           <Link to="/payment-successful" className="place-order-now-btn">

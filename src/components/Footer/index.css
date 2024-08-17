@@ -8,6 +8,7 @@
   flex-direction: column;
   position: relative;
   top: 245px;
+  margin-bottom: 0px;
 }
 
 .footer-logo-heading-con {
@@ -58,13 +59,5 @@
 @media screen and (max-width: 768px) {
   .footer-heading {
     font-size: 26px;
-  }
-
-  .footer-text {
-    font-size: 18px;
-  }
-
-  .footer-contact {
-    font-size: 18px;
   }
 }
