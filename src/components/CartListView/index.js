@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faIndianRupeeSign} from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom'
 
 import CartContext from '../../context/CartContext'
 
@@ -58,9 +59,11 @@ const CartListView = () => (
               <p className="total-price">{price}</p>
             </div>
           </div>
-          <button className="place-order-btn" type="button">
-            Place Order
-          </button>
+          <Link to="/payment-successful" className="place-order-now-btn">
+            <button type="button" className="place-order-now-btn">
+              Place Order
+            </button>
+          </Link>
         </>
       )
     }}

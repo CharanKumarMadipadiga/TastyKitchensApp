@@ -54,6 +54,7 @@
   text-align: left;
   color: #475569;
   outline: none;
+  cursor: pointer;
 }
 
 .dropdown-option {

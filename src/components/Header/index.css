@@ -82,8 +82,9 @@
 
 .logout-btn:hover {
   font-size: 13px;
-  background-color: rgba(0, 191, 255, 0.958);
+  background-color: aqua;
   font-weight: 700;
+  color: black;
 }
 
 @media screen and (min-width: 768px) {

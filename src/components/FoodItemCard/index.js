@@ -16,7 +16,7 @@ const FoodItemCard = props => {
   return (
     <CartContext.Consumer>
       {value => {
-        const {addCartItem} = value
+        const {addCartItem, increaseQuantity, decreaseQuantity} = value
 
         const onClickAddToCart = () => {
           setAddBtn(true)
@@ -27,7 +27,7 @@ const FoodItemCard = props => {
         const onClickMinus = () => {
           if (quantity > 0) {
             setQuantity(prevState => prevState - 1)
-            addCartItem({...foodCardDetails, quantity})
+            decreaseQuantity({...foodCardDetails, quantity})
           } else {
             setQuantity(0)
           }
@@ -35,7 +35,7 @@ const FoodItemCard = props => {
 
         const onClickPlus = () => {
           setQuantity(prevState => prevState + 1)
-          addCartItem({...foodCardDetails, quantity})
+          increaseQuantity({...foodCardDetails, quantity})
         }
 
         const renderAddQuantityButtons = () => (
