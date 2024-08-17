@@ -15,10 +15,11 @@
 
 .filter-container {
   display: flex;
-  width: 180px;
+  width: 170px;
   height: 24px;
   /* border: 1px solid blue; */
   justify-content: space-between;
+  align-items: center;
   padding: 8px;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .filter-icon {
-  background: #475569;
+  font-size: 20px;
 }
 
 .dropdown {

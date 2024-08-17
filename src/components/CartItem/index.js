@@ -80,7 +80,7 @@ const CartItem = props => {
             icon={faIndianRupeeSign}
             style={{color: '#FFA412', fontSize: '16px'}}
           />
-          <p className="cart-cost">{cost}.00</p>
+          <p className="cart-cost">{cost * quantity}.00</p>
         </div>
       </li>
     </>

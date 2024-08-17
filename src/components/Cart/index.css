@@ -38,3 +38,35 @@
 .cart-quantity-header {
   margin-left: 60px;
 }
+
+.remove-container {
+  width: 80%;
+  height: 50px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 120px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.remove-all-items-btn {
+  width: 115px;
+  height: 45px;
+  background-color: #ffa412;
+  color: #ffffff;
+  font-family: DM Sans;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.remove-all-items-btn:hover {
+  font-weight: 700;
+  background-color: aqua;
+  color: black;
+}

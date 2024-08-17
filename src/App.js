@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
@@ -13,7 +13,10 @@ import NotFound from './components/NotFound'
 import './App.css'
 
 const App = () => {
-  const [cartList, setCartList] = useState([])
+  const [cartList, setCartList] = useState(() => {
+    const savedCartList = localStorage.getItem('cartList')
+    return savedCartList ? JSON.parse(savedCartList) : []
+  })
 
   const addCartItem = product => {
     console.log('callback list called')
@@ -51,7 +54,13 @@ const App = () => {
     }
   }
 
-  const deleteCartItem = () => {}
+  useEffect(() => {
+    localStorage.setItem('cartList', JSON.stringify(cartList))
+  }, [cartList])
+
+  const deleteCartList = () => {
+    setCartList([])
+  }
 
   return (
     <BrowserRouter>
@@ -61,7 +70,7 @@ const App = () => {
           addCartItem,
           increaseQuantity,
           decreaseQuantity,
-          deleteCartItem,
+          deleteCartList,
         }}
       >
         <Switch>

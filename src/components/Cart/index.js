@@ -8,10 +8,22 @@ import './index.css'
 const Cart = () => (
   <CartContext.Consumer>
     {value => {
-      const {cartList} = value
+      const {cartList, deleteCartList} = value
+      const onClickRemoveAllItems = () => {
+        deleteCartList()
+      }
       return cartList.length !== 0 ? (
         <>
           <Header />
+          <div className="remove-container">
+            <button
+              className="remove-all-items-btn"
+              type="button"
+              onClick={onClickRemoveAllItems}
+            >
+              Remove All
+            </button>
+          </div>
           <div className="cart-con">
             <div className="cart-header">
               <span className="cart-item-header">Item</span>
