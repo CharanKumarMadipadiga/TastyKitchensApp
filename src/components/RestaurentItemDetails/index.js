@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
-import FoodItemCart from '../FoodItemCard'
+import FoodItemCard from '../FoodItemCard'
 
 import './index.css'
 
@@ -157,7 +157,7 @@ const RestaurentItemDetails = props => {
 
   const renderFoodItemsList = () =>
     foodItemsList.map(eachItem => (
-      <FoodItemCart key={eachItem.id} foodCardDetails={eachItem} />
+      <FoodItemCard key={eachItem.id} foodCardDetails={eachItem} />
     ))
 
   useEffect(() => {

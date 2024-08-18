@@ -19,39 +19,40 @@ const App = () => {
   })
 
   const addCartItem = product => {
-    console.log('callback list called')
-    console.log('cartList', cartList)
-    const addingItemId = product.id
-    console.log('adding item', addingItemId)
-    setCartList(prevState => [...prevState, product])
-  }
-
-  const increaseQuantity = product => {
-    const addingItemId = product.id
-    const cartItem = cartList.find(eachItem => eachItem.id === addingItemId)
-    if (cartItem) {
+    const existingItem = cartList.find(eachItem => eachItem.id === product.id)
+    if (existingItem) {
       setCartList(prevState =>
         prevState.map(eachItem =>
-          eachItem.id === addingItemId
+          eachItem.id === product.id
             ? {...eachItem, quantity: eachItem.quantity + 1}
             : eachItem,
         ),
       )
+    } else {
+      setCartList(prevState => [...prevState, {...product, quantity: 1}])
     }
   }
 
+  const increaseQuantity = product => {
+    setCartList(prevState =>
+      prevState.map(eachItem =>
+        eachItem.id === product.id
+          ? {...eachItem, quantity: eachItem.quantity + 1}
+          : eachItem,
+      ),
+    )
+  }
+
   const decreaseQuantity = product => {
-    const addingItemId = product.id
-    const cartItem = cartList.find(eachItem => eachItem.id === addingItemId)
-    if (cartItem) {
-      setCartList(prevState =>
-        prevState.map(eachItem =>
-          eachItem.id === addingItemId
+    setCartList(prevState =>
+      prevState
+        .map(eachItem =>
+          eachItem.id === product.id
             ? {...eachItem, quantity: eachItem.quantity - 1}
             : eachItem,
-        ),
-      )
-    }
+        )
+        .filter(eachItem => eachItem.quantity > 0),
+    )
   }
 
   useEffect(() => {
