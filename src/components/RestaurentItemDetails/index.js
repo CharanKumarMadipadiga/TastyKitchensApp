@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
+import Footer from '../Footer'
 import FoodItemCard from '../FoodItemCard'
 
 import './index.css'
@@ -176,6 +177,7 @@ const RestaurentItemDetails = props => {
           ? renderLoadSpinner()
           : renderFoodItemsList()}
       </ul>
+      <Footer />
     </>
   )
 }

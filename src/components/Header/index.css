@@ -140,17 +140,17 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    /* border: 1px solid blue; */
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
     width: 90%;
     background-color: #f8fafc;
-    position: absolute;
+    position: fixed;
     top: 96px;
-    z-index: 999;
-    margin-bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
