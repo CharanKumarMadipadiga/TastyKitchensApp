@@ -27,7 +27,7 @@
   font-family: DM Sans;
   font-size: 32px;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 40px;
   text-align: left;
   color: #183b56;
 }
@@ -39,6 +39,8 @@
   line-height: 24px;
   text-align: left;
   color: #64748b;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .filter-icon {
@@ -74,9 +76,10 @@
 @media screen and (max-width: 768px) {
   .popular-restaurent-con {
     width: 100%;
+    top: 150px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 45px;
+    margin-top: 30px;
     margin-bottom: 150px;
   }
 
@@ -102,6 +105,16 @@
   .dropdown-option {
     font-size: 16px;
   }
+
+  .popular-restuarent-heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .restaurent-caption {
+    font-size: 12px;
+  }
 }
 
 .restrents-list {
@@ -114,7 +127,7 @@
   margin-bottom: 20px;
 }
 
-.carousels-loader-container {
+.restaurents-loader-container {
   width: 100%;
   height: 80vh;
   display: flex;
@@ -130,6 +143,7 @@
   .restrents-list {
     width: 100%;
     justify-content: center;
+    margin-top: 40px;
   }
 }
 

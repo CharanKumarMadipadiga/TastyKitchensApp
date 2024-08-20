@@ -35,7 +35,7 @@ const offsetAndLimit = {
 
 const Home = () => {
   const token = Cookies.get('jwt_token')
-  const [apiStatus, setApiStatus] = useState('')
+  const [apiStatus, setApiStatus] = useState(apiConstants.pending)
   const [restaurentsList, setRestaurentsList] = useState([])
   const [offsetAndLimitObj, setOffsetAndLimitObj] = useState(offsetAndLimit)
   const [activePageValue, setActivePage] = useState(1)
@@ -97,7 +97,7 @@ const Home = () => {
     ))
 
   const loadSpinner = () => (
-    <div className="carousels-loader-container">
+    <div className="restaurents-loader-container">
       <Loader
         type="TailSpin"
         color="#F7931E"
